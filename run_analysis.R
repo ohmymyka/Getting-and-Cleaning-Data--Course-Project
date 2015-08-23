@@ -63,6 +63,8 @@ library(reshape2)
       ##Computes for the mean of type (train and test) across all subjects, activities and measures
       meansdcast<-dcast(meansdmelt,subjectid+activity~variable,mean)
       
-      ##Converts to narrow datase
-      meansdmelt<-melt(meansdcast,id=c("subjectid","activity"),measure.vars=varnames)
+      ##Converts to narrow database
+      meansdmelt<-melt(meansdcast,id=c("subjectid","activity"),measure.vars=varnames,
+                       variable.name = "measure",
+                       value.name = "mean")
       write.table(meansdmelt,file="tidydata.txt", sep=" ",row.names=FALSE)
