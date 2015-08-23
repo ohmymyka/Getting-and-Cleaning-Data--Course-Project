@@ -1,0 +1,71 @@
+---
+title: "Getting and Cleaning Data Course Project:Code Book"
+output: html_document
+---
+## Source of the Data
+The data used in this course project is a A Public Domain Dataset for Human Activity Recognition Using Smartphones by Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. It was collected from the accelerometers from the Samsung Galaxy S smartphone
+
+For more information on the data, please visit: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+## Variables
+The final tidy dataset (tidydata.txt) contains 4 variables:
+
+1. subjectid - with values from 1 to 30. This represents the person/volunteer who performed the activity
+2. activity - with values WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING. This represents the activity done by the person/volunteer
+3. variable - with the following values: These values are either mean or standard deviation of a measurement.
+      
+      Mean          | Std
+      --------------| -------------
+      fBodyAccJerk-mean()-X | fBodyAccJerk-std()-X
+      fBodyAccJerk-mean()-Y | fBodyAccJerk-std()-Y
+      fBodyAccJerk-mean()-Z | fBodyAccJerk-std()-Z
+      fBodyAccMag-mean() | fBodyAccMag-std()
+      fBodyAcc-mean()-X | fBodyAcc-std()-X
+      fBodyAcc-mean()-Y | fBodyAcc-std()-Y
+      fBodyAcc-mean()-Z | fBodyAcc-std()-Z
+      fBodyBodyAccJerkMag-mean() | fBodyBodyAccJerkMag-std()
+      fBodyBodyGyroJerkMag-mean() | fBodyBodyGyroJerkMag-std()
+      fBodyBodyGyroMag-mean() | fBodyBodyGyroMag-std()
+      fBodyGyro-mean()-X | fBodyGyro-std()-X
+      fBodyGyro-mean()-Y | fBodyGyro-std()-Y
+      fBodyGyro-mean()-Z | fBodyGyro-std()-Z
+      tBodyAccJerkMag-mean() | tBodyAccJerkMag-std()
+      tBodyAccJerk-mean()-X | tBodyAccJerk-std()-X
+      tBodyAccJerk-mean()-Y | tBodyAccJerk-std()-Y
+      tBodyAccJerk-mean()-Z | tBodyAccJerk-std()-Z
+      tBodyAccMag-mean() | tBodyAccMag-std()
+      tBodyAcc-mean()-X | tBodyAcc-std()-X
+      tBodyAcc-mean()-Y | tBodyAcc-std()-Y
+      tBodyAcc-mean()-Z | tBodyAcc-std()-Z
+      tBodyGyroJerkMag-mean() | tBodyGyroJerkMag-std()
+      tBodyGyroJerk-mean()-X | tBodyGyroJerk-std()-X
+      tBodyGyroJerk-mean()-Y | tBodyGyroJerk-std()-Y
+      tBodyGyroJerk-mean()-Z | tBodyGyroJerk-std()-Z
+      tBodyGyroMag-mean() | tBodyGyroMag-std()
+      tBodyGyro-mean()-X | tBodyGyro-std()-X
+      tBodyGyro-mean()-Y | tBodyGyro-std()-Y
+      tBodyGyro-mean()-Z | tBodyGyro-std()-Z
+      tGravityAccMag-mean() | tGravityAccMag-std()
+      tGravityAcc-mean()-X | tGravityAcc-std()-X
+      tGravityAcc-mean()-Y | tGravityAcc-std()-Y
+      tGravityAcc-mean()-Z | tGravityAcc-std()-Z
+  
+      To further understand these codes, let us break it down. Take tGravityAcc-mean()-z:
+  
+      <font color="red">t</font>GravityAcc-mean()-z
+      
+      + the first letter is the code for domain signals. Its values can either be t= time or f=frequency
+      
+      t<font color="red">GravityAcc</font>-mean()-z
+      
+      + the second part of the variable name is the code for acceleration signal. Its values can either be BodyAcc= Body Acceleration or GravityACC=Gravitational Acceleration. Other suffixes like Gyro stands for the angular velocity vector measured by the gyroscope, Mag stands for the magnitude of the three-dimensional signals and Jerk stands for the Jerk signals obtained from the body linear acceleration and angular velocity.
+      
+      tGravityAcc-<font color="red">mean()</font>-z
+      
+      + the third part of the variable name is the measure estimated from the signal. Its values are either mean for the mean value and std for the standard deviation
+      
+      tGravityAcc-mean()-<font color="red">z</font>
+      
+      + the last part of the variable name represents the 3-axial signals. Its values can either be X, Y, or Z pertaining to the X, Y or Z directions.
+
+4. Value - this represents the mean of the test and train datasets for each subject, activity and measure.

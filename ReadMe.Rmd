@@ -1,0 +1,33 @@
+---
+title: "Course Project for the Getting and Cleaning Data"
+output: html_document
+---
+##Introduction
+This repository contains the following:
+1. Tidy data set of means of the mean and std of the measurements - tidydata.txt
+2. R script containing the code that converted the original data to the tidy data - run_analysis.R
+3. Code book containing the explanations about the variables in the tiddy data
+
+##Process
+The original data was converted to a tidy data by following these steps:
+
+1. Merge the subject, X and Y datasets for both train and test datasets. Add another column for type which tags whether the observation came from the train or test datasets.
+
+2. Merge the train and test datasets into one dataset.
+
+3. Use the data from the features.txt file to add column labels to the new dataset.
+
+4. Left join the data from activity_labels.txt to convert the activity from numeric codes to descriptive labels.
+
+5. Create a new dataset by selecting only the subject id, descriptive activity label, type and the columns corresponding to the mean and std computations.
+
+6. Use dcast to calculate the mean of the columns across the type. Resulting data shows the mean for each subject, activity and measure.
+
+7. Melt the dataset to a narrow one to make it more readable.
+
+8. Print it to a .txt file
+
+##Notes:
+* Using the grep function to select all columns for mean and std will also select the columns for meanFreq. This is not included in the needed tidy data. So, use another grep function to select only those columns with mean and std (-grep("meanFreq"))
+
+* The variable names for the column labels are deemed descriptive enough so they were retained as is with a corresponding explanation inside the code book for ease of comprehension.
