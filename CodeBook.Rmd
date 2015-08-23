@@ -1,7 +1,5 @@
----
-title: "Getting and Cleaning Data Course Project:Code Book"
-output: html_document
----
+#Getting and Cleaning Data Course Project:Code Book
+
 ## Source of the Data
 The data used in this course project is a A Public Domain Dataset for Human Activity Recognition Using Smartphones by Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. It was collected from the accelerometers from the Samsung Galaxy S smartphone
 
@@ -12,7 +10,7 @@ The final tidy dataset (tidydata.txt) contains 4 variables:
 
 1. subjectid - with values from 1 to 30. This represents the person/volunteer who performed the activity
 2. activity - with values WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING. This represents the activity done by the person/volunteer
-3. variable - with the following values: These values are either mean or standard deviation of a measurement.
+3. measure - with the following values: These values are either mean or standard deviation of a measurement.
       
       Mean          | Std
       --------------| -------------
@@ -68,4 +66,7 @@ The final tidy dataset (tidydata.txt) contains 4 variables:
       
       + the last part of the variable name represents the 3-axial signals. Its values can either be X, Y, or Z pertaining to the X, Y or Z directions.
 
-4. Value - this represents the mean of the test and train datasets for each subject, activity and measure.
+4. Mean - this represents the mean of the test and train datasets for each subject, activity and measure.
+
+## Units
+The measures have different units but after the normalization, they are transformed into a set of values with a common scale independent of any form of unit of measurement.
